@@ -9,10 +9,17 @@
     const palavra = prompt(`Informe uma palavra aleatória:`);
 
     //Processamento
+    let vogais = [];
+    let consoantes = [];
+
     for(let item of palavra){
-        
+        if(item == "a" || item == "A" || item == "e" || item == "E" || item == "i" || item == "I" || item == "o" || item == "O" || item == "u" || item == "U"){
+            vogais.push(item);
+        }
+        else{
+            consoantes.push(item);
+        }
     }
-
     //Saída
-
+    document.write(`A quantidade de vogais será: ${vogais.length}. <br> A quantidade de consoante será: ${consoantes.length}. <br> Lista de vogais: ${vogais.join(", ")}. <br> Lista de consoantes: ${consoantes.join(", ")}.`);
 </script>

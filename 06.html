@@ -7,11 +7,18 @@
     */
 
     //Entrada
-
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
+    
+    const questao = Number(prompt(`Informe quais são os números desta lista: A, E, 2, 4.8, CINQUENTA, Araquari, 80, 10, 3.2`));
 
     //Processamento
+    num = [];
 
-
+    for(let item of lista){
+        if(item == questao){
+            num.push(item);
+        }
+    }
     //Saída
 
 </script>
