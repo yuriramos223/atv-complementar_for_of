@@ -8,11 +8,46 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
     //Processamento
+    let sc = [];
+    let pr = [];
+    let rs = [];
 
+    for(let item of cidades){
+        const estado = prompt(`Qual o estado que pertence a cidade ${item}?`);
+        switch(estado){
+            case "SC":
+                sc.push(item);
+            break;
 
+            case "PR":
+                pr.push(item);
+            break;
+
+            case "RS":
+                rs.push(item);
+            break;
+        }
+    }
     //Saída
-
+    if(sc.length > rs.length && rs.length > pr.length){
+        document.write(`Cidades de SC: ${sc.join(", ")}. <br> Cidades de RS: ${rs.join(", ")}. <br> Cidades de PR: ${pr.join(", ")}.`);
+    }
+    else if(sc.length > pr.length && pr.length > rs.length){
+        document.write(`Cidades de SC: ${sc.join(", ")}. <br> Cidades de PR: ${pr.join(", ")}. <br> Cidades de RS: ${rs.join(", ")}.`);
+    }
+    else if(rs.length > sc.length && sc.length > pr.length){
+        document.write(`Cidades de RS: ${rs.join(", ")}. <br> Cidades de SC: ${sc.join(", ")}. <br> Cidades de PR: ${pr.join(", ")}.`);
+    }
+    else if(rs.length > pr.length && pr.length > sc.length){
+        document.write(`Cidades de RS: ${rs.join(", ")}. <br> Cidades de PR: ${pr.join(", ")}. <br> Cidades de SC: ${sc.join(", ")}.`);
+    }
+    else if(pr.length > rs.length && rs.length > sc.length){
+        document.write(`Cidades de PR: ${pr.join(", ")}. <br> Cidades de RS: ${rs.join(", ")}. <br> Cidades de SC: ${sc.join(", ")}.`);
+    }
+    else if(pr.length > sc.length && sc.length > rs.length){
+        document.write(`Cidades de PR: ${pr.join(", ")}. <br> Cidades de SC: ${sc.join(", ")}. <br> Cidades de RS: ${rs.join(", ")}.`);
+    }
 </script>
